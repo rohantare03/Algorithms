@@ -17,7 +17,7 @@ namespace Algorithm
                 Console.WriteLine(item);
             }
         }
-        static void InsertSort(IComparable[] array)
+        public void InsertSort(IComparable[] array)
         {
             int i, j;
 
@@ -32,6 +32,29 @@ namespace Algorithm
                     j--;
                 }
                 array[j + 1] = value;
+            }
+        }
+        public void Anagrams()
+        {
+            Console.WriteLine("Enter the First Name:");
+            string FirstName = Console.ReadLine();
+            Console.WriteLine("Enter the Second Name:");
+            string SecondName = Console.ReadLine();
+
+            char[] charFirst = FirstName.ToCharArray();
+            char[] charSecond = SecondName.ToCharArray();
+            Array.Sort(charFirst);
+            Array.Sort(charSecond);
+
+            string firstName = new string(charFirst);
+            string secondName = new string(charSecond);
+            if (firstName == secondName)
+            {
+                Console.WriteLine("The Entered Words are Anagrams", firstName, secondName);
+            }
+            else
+            {
+                Console.WriteLine("The Entered Words are not Anagrams", firstName, secondName);
             }
         }
     }
