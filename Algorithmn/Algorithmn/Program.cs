@@ -8,6 +8,7 @@
             Console.WriteLine("1 for insert sort");
             Console.WriteLine("2 for anagrams");
             Console.WriteLine("3 for bubble sort");
+            Console.WriteLine("4 for prime numbers");
 
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -24,6 +25,11 @@
                     Algorithms bubble = new Algorithms();
                     bubble.BubbleSort();
                     break;
+                case 4:
+                    Algorithms prime = new Algorithms();    
+                    prime.PrimeNumbers();
+                    break;
+
             }
            
         }

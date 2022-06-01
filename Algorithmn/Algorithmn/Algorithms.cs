@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithm
 {
-    internal class Algorithms
+    public class Algorithms
     {
         public void Insert()
         {
@@ -76,6 +76,26 @@ namespace Algorithm
             Console.WriteLine("Sorted values are :");
             foreach (int element in Numbers)
                 Console.Write(element + " ");
+        }
+        public void PrimeNumbers()
+        {
+            int i, Num, count;
+            Console.WriteLine("Prime Numbers in 0-1000 range are : ");
+            for (Num = 0; Num <= 1000; Num++)
+            {
+                count = 0;
+                for ( i = 2; i <= Num / 2; i++)
+                {
+                    if ( Num % i == 0)
+                    {
+                        count++;
+                        break;
+                    }
+                }
+                if (count == 0 && Num != 1)
+                    Console.WriteLine("{0}", Num);
+            }
+            Console.WriteLine();
         }
     }
 }
