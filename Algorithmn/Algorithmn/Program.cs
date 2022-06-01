@@ -7,6 +7,7 @@
             Console.WriteLine("Welcome to Algorithm Assignment");
             Console.WriteLine("1 for insert sort");
             Console.WriteLine("2 for anagrams");
+            Console.WriteLine("3 for bubble sort");
 
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -18,6 +19,10 @@
                 case 2:
                     Algorithms anagram = new Algorithms();
                     anagram.Anagrams();
+                    break;
+                case 3:
+                    Algorithms bubble = new Algorithms();
+                    bubble.BubbleSort();
                     break;
             }
            

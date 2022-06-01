@@ -57,5 +57,25 @@ namespace Algorithm
                 Console.WriteLine("The Entered Words are not Anagrams", firstName, secondName);
             }
         }
+        public void BubbleSort()
+        {
+            int[] Numbers = { 66, 55, 33, 22, 88, 11 };
+            int temp;
+            for (int j = 0; j <= Numbers.Length - 2; j++)
+            {
+                for (int i = 0; i <= Numbers.Length - 2; i++)
+                {
+                    if (Numbers[i] > Numbers[i + 1])
+                    {
+                        temp = Numbers[i + 1];
+                        Numbers[i + 1] = Numbers[i];
+                        Numbers[i] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("Sorted values are :");
+            foreach (int element in Numbers)
+                Console.Write(element + " ");
+        }
     }
 }
